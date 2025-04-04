@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 // Create teachers
 using DesignPatterns.Association;
+using DesignPatterns.FactoryMethod_DP.Buttons;
 using DesignPatterns.FactoryMethod_DP.ContentValidtorExample.AppViewer;
 using DesignPatterns.FactoryMethod_DP.Dialog;
 
@@ -27,13 +28,23 @@ using DesignPatterns.FactoryMethod_DP.Dialog;
 
 #region FactoryMethod Desing Pattern
 
-SystemDailog system = new SystemDailog();
-Console.WriteLine(system.RenderDialog());
+//SystemDailog system = new SystemDailog();
+//Console.WriteLine(system.RenderDialog());
 
-var htmlViewer = new HTMLAppViewer();
-Console.WriteLine(htmlViewer.ViewContentOnScreen());
+//var htmlViewer = new HTMLAppViewer();
+//Console.WriteLine(htmlViewer.ViewContentOnScreen());
 
-var xmlViewer = new XMLAppViewer();
-Console.WriteLine(xmlViewer.ViewContentOnScreen());
+//var xmlViewer = new XMLAppViewer();
+//Console.WriteLine(xmlViewer.ViewContentOnScreen());
 
+
+MobileDialog mobileDialog = new MobileDialog();
+MobileButton mobileButton = new MobileButton();
+Console.WriteLine(mobileDialog.CreatedButton().Show());
+
+
+SystemDailog systemDailog = new SystemDailog();
+SystemButton systemButton = new SystemButton();
+Console.WriteLine(systemDailog.CreatedButton().Show());
 #endregion
+

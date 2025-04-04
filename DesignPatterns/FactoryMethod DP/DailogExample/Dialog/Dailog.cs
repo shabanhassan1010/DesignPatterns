@@ -13,9 +13,7 @@ namespace DesignPatterns.FactoryMethod_DP.Dialog
         public string RenderDialog()
         {
             Button button = CreatedButton();
-            return $@"
-            {button.Show()}
-            ";
+            return $@" {button.Show()}  ";
         }
     }
 }
