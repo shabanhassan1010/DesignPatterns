@@ -1,8 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
-// Create teachers
-using DesignPatterns.Association;
-using DesignPatterns.FactoryMethod_DP.Buttons;
-using DesignPatterns.FactoryMethod_DP.ContentValidtorExample.AppViewer;
+﻿using DesignPatterns.FactoryMethod_DP.Buttons;
+using DesignPatterns.FactoryMethod_DP.CreatorExample.Creator;
 using DesignPatterns.FactoryMethod_DP.Dialog;
 
 #region  Association
@@ -38,13 +35,50 @@ using DesignPatterns.FactoryMethod_DP.Dialog;
 //Console.WriteLine(xmlViewer.ViewContentOnScreen());
 
 
-MobileDialog mobileDialog = new MobileDialog();
-MobileButton mobileButton = new MobileButton();
-Console.WriteLine(mobileDialog.CreatedButton().Show());
+//MobileDialog mobileDialog = new MobileDialog();
+//MobileButton mobileButton = new MobileButton();
+//Console.WriteLine(mobileDialog.RenderDialog());
 
+//SystemDailog systemDailog = new SystemDailog();
+//SystemButton systemButton = new SystemButton();
+//Console.WriteLine(systemDailog.CreatedButton().Show());
 
-SystemDailog systemDailog = new SystemDailog();
-SystemButton systemButton = new SystemButton();
-Console.WriteLine(systemDailog.CreatedButton().Show());
+ConcreteCreator1 concreteCreator1 = new ConcreteCreator1();
+Console.WriteLine(concreteCreator1.SomeOperation());
+Console.WriteLine(concreteCreator1.FactoryMethod().Operation());
+
 #endregion
 
+
+#region Bulider DP
+
+//try
+//{
+//// Create CS Computer
+//var csBuilder = new ComputerCSBuilder();
+//var director = new Director(csBuilder);
+//var csComputer = director.MakeComputer();
+
+//Console.WriteLine("Computer CS Built:");
+//Console.WriteLine($"CPU Speed: {csComputer.GetMotherBoard().GetCpu().GetSpeed()} GHz");
+//Console.WriteLine($"RAM Size:  {csComputer.GetMotherBoard().GetRam().GetSpeed()} GB");
+//Console.WriteLine($"Disk Type: {csComputer.GetMotherBoard().GetDisk().GetDiskType()}");
+//Console.WriteLine($"Dashboard: {csComputer.Dashboard()}");
+
+//// Create XL Computer
+//var xlBuilder = new ComputerXLBuilder();
+//director.ChangeBuilder(xlBuilder);
+//var xlComputer = director.MakeComputer();
+
+//Console.WriteLine("\nComputer XL Built:");
+//Console.WriteLine($"Network Category:    {xlComputer.GetMotherBoard().GetNetworkCard().GetCategory()}");
+//Console.WriteLine($"Cooling System Temp: {((ComputerXL)xlComputer).GetCs().IsUtfSupport()}");
+//Console.WriteLine($"UPS Duration: {((ComputerXL)xlComputer).GetUps().IsUtfSupport()} minutes");
+//Console.WriteLine($"Backup Power Status: {((ComputerXL)xlComputer).BackupPower()}");
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine($"Error building computer: {ex.Message}");
+//}
+
+#endregion

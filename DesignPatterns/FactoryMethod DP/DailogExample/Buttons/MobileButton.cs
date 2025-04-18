@@ -1,5 +1,4 @@
-﻿
-namespace DesignPatterns.FactoryMethod_DP.Buttons
+﻿namespace DesignPatterns.FactoryMethod_DP.Buttons
 {
     public class MobileButton : Button
     {
@@ -9,7 +8,7 @@ namespace DesignPatterns.FactoryMethod_DP.Buttons
         }
         public override string Show()
         {
-            return "Mobile Button";
+            return "Mobile Button Show";
         }
     }
 }

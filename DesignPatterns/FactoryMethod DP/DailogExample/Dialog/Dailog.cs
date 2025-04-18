@@ -7,12 +7,12 @@ using DesignPatterns.FactoryMethod_DP.Buttons;
 
 namespace DesignPatterns.FactoryMethod_DP.Dialog
 {
-    public abstract class Dialog
+    public abstract class Dialog  // Abstract Class
     {
-        public abstract Button CreatedButton();
+        public abstract Button CreatedButton();  // Factory Method 
         public string RenderDialog()
         {
-            Button button = CreatedButton();
+            Button button = this.CreatedButton();
             return $@" {button.Show()}  ";
         }
     }
