@@ -19,7 +19,8 @@ namespace SolidPrinciple.OpenClose
             {
                 return rect.Width * rect.Height;
             }
-
+            // And If Any New Requirements appear must open this function
+            // in this class and added in it the new Requirements..
             return 0;
         }
     }
