@@ -1,5 +1,6 @@
 ﻿using SolidPrinciple.LiskovSubstituation.Applied_LSP;
 using SolidPrinciple.LiskovSubstituation;
+using SolidPrinciple.Dependency_injection;
 
 namespace SolidPrinciple
 {
@@ -19,6 +20,7 @@ namespace SolidPrinciple
             IBird nonFlyingBird = new Ostrich1();
             nonFlyingBird.Eat();
             // nonFlyingBird.Fly(); ❌ Not allowed — LSP is preserved
+
         }
     }
 }
